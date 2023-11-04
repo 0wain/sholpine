@@ -2,4 +2,5 @@
 ._*
 .Trashes
 node_modules
-/assets/theme.*
+assets/manifest.json
+assets/theme.*
