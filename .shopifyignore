@@ -1,0 +1,16 @@
+.gitignore
+.prettierignore
+.prettierrc.json
+.theme-check.yml
+.vscode/
+.git/
+.github/
+src/
+vite.config.js
+tailwind.config.js
+jsconfig.json
+postcss.config.js
+package.json
+package-lock.json
+node_modules
+*.md
