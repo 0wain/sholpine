@@ -1,0 +1,32 @@
+{
+	"name": "Navigation",
+	"type": "header",
+	"sections": {
+		"announcement-bar": {
+			"type": "announcement-bar",
+			"blocks": {
+				"1": {
+					"type": "announcement",
+					"settings": {
+					  "text": "This is a test announcement",
+					  "link": ""
+					}
+				}
+			},
+			"block_order": [
+			  "1"
+			],
+			"settings": {
+			}
+		},
+		"navigation": {
+			"type": "navigation",
+			"settings": {
+			}
+		}
+	},
+	"order": [
+		"announcement-bar",
+		"navigation"
+	]
+}

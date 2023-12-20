@@ -1,0 +1,46 @@
+{%- for block in section.blocks -%}
+    <div class="w-full bg-slate-800 text-white text-center uppercase">
+        <div class="container mx-auto p-4">
+            <a
+				{%- if block.settings.link != blank -%}
+					href="{{ block.settings.link }}"
+				{%- endif -%}
+			>
+            	{{ block.settings.text }}
+            </a>
+        </div>
+    </div>
+{%- endfor -%}
+
+{% schema %}
+{
+	"name": "Announcement Bar",
+	"max_blocks": 6,
+	"blocks": [
+		{
+			"type": "announcement",
+			"name": "Announcement",
+			"settings": [
+				{
+					"type": "text",
+					"id": "text",
+					"default": "This is the announcement!",
+					"label": "Announcement Text"
+				},
+				{
+					"type": "url",
+					"id": "link",
+					"label": "Announcement Link (Optional)"
+				}
+			]
+		}
+	],
+	"default": {
+		"blocks": [
+			{
+				"type": "announcement"
+			}
+		]
+	}
+}
+{% endschema %}

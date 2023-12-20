@@ -36,7 +36,11 @@
 		{{ content_for_header }}
 	</head>
 
-  <body>
-      {{ content_for_layout }}
-  </body>
+	<body>
+		{% sections 'navigation-group' %}
+		
+		{{ content_for_layout }}
+		
+		{% sections 'footer-group' %}
+	</body>
 </html>

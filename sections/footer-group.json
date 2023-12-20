@@ -1,0 +1,14 @@
+{
+	"name": "Footer",
+	"type": "footer",
+	"sections": {
+		"footer": {
+			"type": "footer",
+			"settings": {
+			}
+		}
+	},
+	"order": [
+		"footer"
+	]
+ }
