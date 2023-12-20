@@ -1,23 +1,40 @@
 <!doctype html>
 <html lang="{{ request.locale.iso_code }}">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="theme-color" content="">
-    <link rel="canonical" href="{{ canonical_url }}">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="description" content="{{ shop.description }}">
+		<meta name="keywords" content="{{ shop.keywords }}">
+		<meta name="author" content="{{ shop.name }}">
+		<meta name="generator" content="Shopify">
+		<meta property="og:title" content="{{ page_title }}">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="{{ canonical_url }}">
+		<meta property="og:site_name" content="{{ shop.name }}">
+		<meta property="og:description" content="{{ shop.description }}">
+		<meta property="og:image:width" content="600">
+		<meta property="og:image:height" content="600">
+		<meta property="og:locale" content="{{ shop.locale }}">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:title" content="{{ page_title }}">
+		<meta name="twitter:description" content="{{ shop.description }}">
+		<meta name="twitter:image" content="{{ 'white_logo.png' | asset_img_url: 'master' }}">
+		<meta name="twitter:image:alt" content="{{ shop.name }}">
+		<meta name="twitter:site" content="@{{ shop.twitter_username }}">
+		<meta name="twitter:creator" content="@{{ shop.twitter_username }}">
+		<link rel="canonical" href="{{ canonical_url }}">
+		<link rel="canonical" href="{{ canonical_url }}">
 
-    <title>{{ shop.name }}</title>
+		<title>{{ shop.name }}</title>
 
-    <meta name="description" content="">
+		{%- liquid
+		  render 'vite-tag' with 'theme.css'
+		  render 'vite-tag' with 'theme.js'
+		-%}
 
-    {%- liquid
-      render 'vite-tag' with 'theme.css'
-      render 'vite-tag' with 'theme.js'
-    -%}
-
-    {{ content_for_header }}
-  </head>
+		{{ content_for_header }}
+	</head>
 
   <body>
       {{ content_for_layout }}
