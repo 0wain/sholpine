@@ -1,0 +1,13 @@
+<div
+	x-data="{ open: false }"
+	class="w-full border border-slate-800 h-fit"
+>
+	<div
+		class="flex flex-row justify-between py-4 px-8 hover:cursor-pointer"
+		@click="open = !open"
+	>
+		<p class="uppercase my-auto">{{ title }}</p>
+		<p class="text-3xl" x-text="open ? '-' : '+'"></p>
+	</div>
+	<div class="px-8 pb-4 whitespace-pre-line" x-show="open" x-collapse>{{ content }}</div>
+</div>
