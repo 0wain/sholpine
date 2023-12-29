@@ -9,5 +9,5 @@
 		<p class="uppercase my-auto">{{ title }}</p>
 		<p class="text-3xl" x-text="open ? '-' : '+'"></p>
 	</div>
-	<div class="px-8 pb-4 whitespace-pre-line" x-show="open" x-collapse>{{ content }}</div>
+	<div class="px-8 pb-4 whitespace-pre-line" x-cloak x-show="open" x-collapse>{{ content }}</div>
 </div>

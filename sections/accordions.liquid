@@ -1,0 +1,45 @@
+<div class="w-full min-h-fit">
+	<div class="container mx-auto h-fit">
+		<div class="flex flex-col gap-4">
+			{%- for block in section.blocks -%}
+				{%
+					render 'accordion',
+					title: block.settings.title,
+					content: block.settings.content,
+					background_color: 'white'
+				%}
+			{%- endfor -%}
+		</div>
+	</div>
+</div>
+
+{% schema %}
+{
+  "name": "Accordions",
+  "settings": [],
+  "max_blocks": 12,
+  "blocks": [
+    {
+	  "type": "accordion",
+      "name": "Accordion",
+      "settings": [
+		{
+		  "type": "text",
+		  "id": "title",
+		  "label": "Title"
+		},
+		{
+		  "type": "textarea",
+		  "id": "content",
+		  "label": "content"
+		}
+	  ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Accordions"
+    }
+  ]
+}
+{% endschema %}
